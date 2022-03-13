@@ -298,7 +298,58 @@
      </section>
 
      <!-- FORMS -->
-     
+     <section id="contact">
+       <div class="container-lg">
+         <div class="text-center">
+           <h2>Get In Touch</h2>
+           <p class="lead">Got Questions? Fill out the form below and contact me directly</p>
+         </div>
+         <div class="row justify-content-center my-5">
+          <div class="col-lg-6">
+            <!-- All labels for a form need to have the "form-label" class -->
+            <form>
+              <label for="name" class="form-label">Your Name:</label>
+              <!-- To include an icon next to the inputs/labels, we use a class called input group and place the icon in a span element
+                   The span element takes the class "input-group-text" -->
+                <div class="mb-4 input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-person-fill"></i>
+                  </span>
+                  <input type="text" class="form-control" id="name">
+                </div>
+
+              <label for="email" class="form-label">Email address:</label>
+                <div class="mb-4 input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-envelope-fill"></i>
+                  </span>
+                  <input type="email" class="form-control" id="email" placeholder="e.g.mario@gmail.com">
+                </div>
+
+              <label for="subject" class="form-label">What is your question about?</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-question-circle-fill"></i>
+                </span>
+                <select id="subject" class="form-select">
+                  <option value="pricing">Pricing Question</option>
+                  <option value="content">Content Question</option>
+                  <option value="other">Other Questions</option>
+                </select>
+              </div>
+              
+              <label for="query" class="form-label">Your Question:</label>
+              <textarea id="query" class="form-control" cols="30" rows="10"></textarea>
+
+              <div class="mb-4 mt-3">
+                <button class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+       </div>
+     </section>
+
 
 
 </body>
