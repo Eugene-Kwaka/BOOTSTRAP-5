@@ -79,8 +79,11 @@
 
              <!-- d-none will remove the img when the screen size is small, d-md-block will display the img when screen size is medium -->
              <div class="col-md-5 text-center d-none d-md-block mt-5">
+               <!-- TOOLTIP -->
+               <span class="tt" data-bs-placement="bottom" title="Days Before Rodeo Album">
                  <!-- img-fluid will make the img size fluid within its the parent class -->
                  <img class="img-fluid" src="/assets/Days Before Rodeo.png" alt="">
+               </span>
              </div>
              
          </div>
@@ -161,7 +164,9 @@
         <!-- justify-content-around will make the items have an equal gap between them along the x axis(horizontally) -->
         <div class="row my-5 g-5 justify-content-around align-items-center">
           <div class="col-6 col-lg-4">
-            <img src="assets/toy-travis.jpg" class="img-fluid" alt="album">
+            <span class="tt" data-bs-placement="bottom" title="Days Before Rodeo Album">
+              <img src="assets/toy-travis.jpg" class="img-fluid" alt="album">
+            </span>
           </div>
           <!-- accordion -->
           <div class="col-lg-6">
@@ -350,9 +355,19 @@
        </div>
      </section>
 
+     <!-- TOOLTIPS -->
+     <!-- I have to add some JS to enable toolkits to work -->
+
 
 
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- ToolTip JS -->
+<script>
+  const tooltips = document.querySelectorAll('.tt')
+  tooltips.forEach(t => {
+    new bootstrap.Tooltip(t)
+  })
+</script>
 </html>
