@@ -74,7 +74,15 @@
                         </h1>
                         <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, tempora.</p>
                         <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
-                </div>  
+                    </div>  
+
+                    <!-- OFFCANVAS TRIGGER/SIDEBAR TRIGGER -->
+                    <!-- I create a button that will initiate the offcanvas to pop out of the sides of the screen
+                         d-block class will make the sidebar a block as it is originally inline -->
+                    <a href="#sidebar" class="d-block mt-3 text-decoration-none" data-bs-toggle="offcanvas" 
+                    role="button" aria-controls="sidebar">
+                      Explore other albums from Travis Scott
+                    </a>
              </div>
 
              <!-- d-none will remove the img when the screen size is small, d-md-block will display the img when screen size is medium -->
@@ -380,26 +388,57 @@
 <!-- the #reg-modal id will prompt this modal to be displayed when the button above is pressed
     -->
 <div class="modal fade" id="reg-modal" 
-tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="modal-title">Get the latest updates</h5>
-      <button class="btn-close" type="button" 
-      data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body">
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-         Architecto illo molestias earum, iste maxime ullam quisquam modi quae officiis alias.
-      </p>
-      <label for="modal-email" class="form-label">Enter your email address:</label>
-      <input type="email" class="form-control" id="modal-email" placeholder="e.g mario@gmail.com">
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-primary">Submit</button>
-    </div>
-  </div>
+      tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-title">Get the latest updates</h5>
+            <button class="btn-close" type="button" 
+             data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+               Architecto illo molestias earum, iste maxime ullam quisquam modi quae officiis alias.
+            </p>
+            <label for="modal-email" class="form-label">Enter your email address:</label>
+            <input type="email" class="form-control" id="modal-email" placeholder="e.g mario@gmail.com">
+          </div>
+          <div class="modal-footer">
+             <button class="btn btn-primary">Submit</button>
+         </div>
+        </div>
+      </div>
 </div>
+
+
+<!--  OFFCANVAS ITSELF -->
+<!-- offcanvas-start(left) is a position of the offcanvas meaning it will pop from the LEFT -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar"
+      aria-labelledby="sidebar-label">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sidebar-label">
+          Travis Scott other Albums
+        </h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="close">
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="mb-4">
+          <p class="lead">Check Out his other albums</p>
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+            Albums
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Birds In The Trap Sing McKnight (2016)</a></li>
+            <li><a class="dropdown-item" href="#">Astroworld (2018)</a></li>
+            <li><a class="dropdown-item" href="#">Jackboys (2019)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      
 
 </div>
 
